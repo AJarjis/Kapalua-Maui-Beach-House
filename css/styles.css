@@ -1,0 +1,474 @@
+/*** CSS Reset ***/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/*** Common CSS Elements ***/
+
+body {
+    font-family: "BODONI MT", serif;
+    font-size: 1.1em;
+    line-height: 1.3em;
+    /*Prevents any text overflow during resize*/
+    word-wrap: break-word; 
+}
+
+/*Centers all content*/
+.wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/*Aligns content to the left within wrapper.*/
+.lColumn {
+    float: left;
+    max-width: 55%;
+}
+
+/*Aligns content to the right within wrapper.*/
+.rColumn {
+    float: right;
+    margin-left: 5%;
+    max-width: 40%;
+}
+
+a {
+    text-decoration: none;
+    color: #ff9a00;
+}
+
+a:hover {
+    color: #6fd7d4;
+}
+
+a:active {
+    color: #ff9a00;
+}
+
+h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    /*Causes div to resize with content, 
+    used multiple times in this css on other elements.*/
+    overflow: auto;
+    margin-bottom: 20px;
+}
+
+/*Logo*/
+header img { 
+    float: left;
+    width: 240px;
+    height: 83px;
+    margin: 1%;
+    margin-left: 2%;
+}
+
+nav {
+    float: right;
+    margin-top: 3%;
+    margin-right: 2%;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style-type: none;
+    font-size: 20px;
+    color: black;
+}
+
+nav span {
+    color: black;
+    font-weight: normal;
+}
+
+nav a {
+    color: inherit;
+}
+
+nav a:hover { 
+    color: #ff9a00;
+}
+
+nav a:active {
+    color: inherit;
+}
+
+#currentPage {
+    font-weight: bold;
+    color: #ff9a00; 
+}
+
+#mainSection {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    overflow: auto; 
+}
+
+#mainSection p {
+    margin-top: 10px;
+}
+
+#mainSection img {
+    width: 100%;
+}
+
+#mainSection h2 { 
+    padding-top: 20px;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    background-color: #666666;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 0.7em;
+}
+
+footer section {
+    margin-left: 1%;
+    width: 30%;
+    float: left;
+}
+
+footer a {
+    color: #6fd7d4;
+}
+
+footer a:hover {
+    color: #ff9a00;
+}
+
+footer h2, p {
+    margin-bottom: 10px;
+}
+
+/*Social Media Icons*/
+footer img {
+    margin-left: 10px;
+}
+
+footer ul{
+    list-style-type: none;
+}
+
+#signature {
+    margin-top: 30px;
+    width: 100%;
+}
+
+#copyright {
+    clear: both;
+}
+
+button {
+    background-color: #ff9a00;
+    text-shadow: 0px 1px 1px #ffffff;
+    font-weight: bold;
+    border: none;
+    border-bottom: 2px solid #666666;
+    padding: 10px;
+    width: 80%;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+button:hover:enabled {
+    background-color: #6fd7d4;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #666666;
+    color: black;
+    text-shadow: none;
+}
+
+/*Gives illusion of button being pressed.*/
+button:active {
+    background-color: #6fd7d4;
+    transform: translateY(4px);
+    box-shadow: 0 5px #666;
+}
+
+/*Removes annoying blue border when interacting with button.*/
+button:focus {
+    outline: 0;
+}
+
+/*** Home Page CSS ***/
+
+#banner img {
+    width: 100%;
+    /*Prevents gap between banner and review.*/
+    vertical-align: bottom; 
+}
+
+#reviewSection {
+    background-color: #e5e5e5;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+#reviewSection p {
+    text-align: right;
+    line-height: 3em;
+}
+
+/*Youtube Video*/
+iframe {
+    margin-top: 25px;
+    width: 100%;
+    height: 540px;
+    border: none;
+}
+
+/*** Details Page CSS ***/
+
+#gallery {
+    width: 100%;
+    overflow: hidden;
+}
+
+#currentImage {
+    width: 100%;
+}
+
+.thumbnail {
+    float: left;
+    margin: 10px;
+    opacity: 0.5;
+    transition: 0.8s;
+}
+
+/*Sets first thumbnail to active on page load*/
+.thumbnail:nth-of-type(2) { 
+    opacity: 1;
+}
+
+.thumbnail:hover {
+    cursor: pointer;
+    /* Overides Javascript*/
+    opacity: 1 !important;
+}
+
+#facts {
+    background-color: #e5e5e5;
+    padding: 0px 30px 30px 30px;
+    height: auto;
+}
+
+#facts h2 {
+    text-align: center;
+    position: relative;
+}
+
+#facts li{
+    text-align: left;
+    margin-top: 10px;
+}
+
+#floorplan {
+    width: 100%;
+}
+
+/*** Directions Page CSS ***/
+
+#map {
+    width: 100%;
+    height: 517px;
+}
+
+#address {
+    clear: both;
+    overflow: auto;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+}
+
+#distances li {
+    margin-top: 10px;
+    list-style-position: inside;
+}
+
+/*** Nearby Page CSS ***/
+
+.tab {
+    list-style-type: none;
+    overflow: auto;
+    background-color: #f1f1f1;
+    margin-top: 25px;
+}
+
+.tab li {
+    float: left;
+}
+
+.tab li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 16px 15px;
+    transition: 0.5s;
+}
+
+.tab li a:hover {
+    background-color: #e5e5e5;
+}
+
+.tab li a:focus, .active {
+    background-color: #cccccc;
+}
+
+.tabContent {
+    display: none;
+    padding: 50px;
+    background-color: #cccccc;
+    overflow: auto;
+}
+
+.tabContent .lColumn{
+    padding-top: 25px;
+}
+
+.tabContent .lColumn, .rColumn {
+    text-align: center;
+}
+
+.tabContent p {
+    text-align: left;
+}
+
+.tabContent section {
+    overflow: auto;
+    margin-bottom: 30px;
+    padding-bottom: 20px
+}
+
+/*** Review Page CSS ***/
+
+#postCommentSection {
+    background-color: #cccccc;
+    padding: 20px 30px 20px 30px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/*Post Comment Section*/
+fieldset {
+    border: none;
+    border-top: 1px #ff9a00 solid;
+    border-bottom: 1px #ff9a00 solid;
+    padding: 20px;
+}
+
+fieldset div {
+    margin: 10px;
+    padding-bottom: 10px;
+    width: 60%;
+    text-align: left;
+}
+
+label {
+    display: block;
+    width: 110px;
+    padding-right: 10px;
+    float: left;
+}
+input {
+    min-width: 140px;
+    width: 40%;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    resize: none;
+    float: left;
+    margin: 10px;
+}
+
+fieldset button {
+    width: 120px;
+    margin-top: 15px;
+    float: right;
+}
+
+/* Display Comment Section */
+#displayCommentSection {
+    padding: 20px 20px 40px 20px;
+    overflow: auto;
+    margin-bottom: 40px;
+    background-color: #cccccc; 
+}
+
+#allPosts {
+    margin-top: 30px;
+}
+
+/*User's Review*/
+.post {
+    padding-bottom: 30px;
+}
+
+.post h3 {
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.post span {
+    color: white;
+    font-style: italic;
+    font-size: 18px;
+}
+
+.post p {
+    font-size: 16px;
+}
+
+/* Form Display CSS */
+
+#form {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6)
+}
+
+#formContent {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid black;
+    width: 60%;
+}
+
+#close {
+    color: black;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    clear: both;
+    margin-left: 20px;
+}
+
+#close:hover, .close:focus {
+    color: #6fd7d4;
+    text-decoration: none;
+    cursor: pointer;
+}

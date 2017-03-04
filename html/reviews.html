@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Kapalua Maui Beach House | Reviews</title>
+        <link type="text/css" rel="stylesheet" href="../css/styles.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="../javascript/script.js"></script>
+    </head>
+    <body onload="fetchPosts()">
+        
+        <header>
+            <a href="index.html">
+                <img src="../images/logo.png" alt="Kapalua Maui Beach House" />
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a><span> | </span></li>
+                    <li><a href="details.html">Details</a><span> | </span></li>
+                    <li><a href="directions.html">Directions</a><span> | </span></li>
+                    <li><a href="nearby.html">Nearby</a><span> | </span></li>
+                    <li id="currentPage"><a href="reviews.html">Reviews</a></li>
+               </ul>
+            </nav>
+        </header>
+        
+        <div id="mainSection">
+            <div class="wrapper">
+                <h1>Visitor Book</h1>
+                <p>
+                    You’ve probably heard by now just how amazing Kapalua Place is but don’t just take our word for 
+                    it read the plenty of reviews left by previous people who have chosen Kapalua as their haven below. 
+                    Or maybe you’ve just returned from your heavenly stay and want the world to know; feel free to write 
+                    a review below…
+                </p>
+                <div id="postCommentSection">
+                    <form id="postComment">
+                        <fieldset>
+                            <legend>Your Review</legend>
+                            <div>
+                                <label for="name">Name:</label>
+                                <input id="name" type="text" placeholder="George Clooney" />
+                            </div>
+                            <div>
+                                <!-- Email is never used or stored and is just visual. -->
+                                <label for="email">Email:</label>
+                                <input id="email" type="text" placeholder="george@email.com" />
+                            </div>
+                            <textarea id="review" placeholder="Enter a review..."></textarea>
+                            <button id="postButton" type="button" form="postComment" onclick="postComment()" disabled="disabled">Post Review</button>
+                        </fieldset>
+                    </form>
+                </div>
+
+                <div id="displayCommentSection">
+                    <div class="wrapper">
+                        <h2>Posts:</h2>
+                        <div id="allPosts">
+                            <!-- Where user's posts will go. -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="wrapper">
+                <section id="contact">
+                    <h2>Contact Lisa</h2>
+                    <p>
+                        <a href="mailto:lisatemp@kapalua.com">lisatemp@kapalua.com</a><br />
+                        +55 662-65431
+                    </p>
+                    <p>
+                        Helden Residences Kapalua Bay
+                        <br />
+                        Eighteen Bay Drive. Lahaina H1 96754
+                    </p>
+                    <!-- Social Media Icons -->
+                    <a href="https://en-gb.facebook.com/"><img src="../images/social%20media%20icons/facebook.png" alt="Facebook" /></a>
+                    <a href="https://twitter.com/?lang=en"><img src="../images/social%20media%20icons/twitter.png" alt="Twitter" /></a>
+                    <a href="https://www.instagram.com/?hl=en"><img src="../images/social%20media%20icons/instagram.png" alt="Instagram"/></a>
+                </section>
+                
+                <section id="links">
+                    <h2>Links</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="details.html">Details</a></li>
+                        <li><a href="directions.html">Directions</a></li>
+                        <li><a href="nearby.html">Nearby</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                    </ul>
+                </section>
+                
+                <section id="representation">
+                    <h2>Representation</h2>
+                    <p>
+                        Represented by AJarjis Estates,
+                        <br />
+                        in cooperation with Kapula Bay:
+                    </p>
+                    <img src="../images/Kapula%20Bay.png" id="signature" alt="Kapula Bay Signature" />
+                </section>
+                
+                <p id="copyright">&copy; Kapalua Beach House | Website design by Ali Jarjis</p>
+            </div>
+        </footer>
+     </body>
+</html>

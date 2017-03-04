@@ -1,0 +1,156 @@
+<!-- 100082948 --> 
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Kapalua Maui Beach House</title>
+        <link type="text/css" rel="stylesheet" href="../css/styles.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="../javascript/script.js"></script>
+    </head>
+    <body>
+        
+        <header>
+            <a href="index.html">
+                <img src="../images/logo.png" alt="Kapalua Maui Beach House" />
+            </a>
+            <nav>
+                <ul>
+                    <li id="currentPage"><a href="index.html">Home</a><span> | </span></li>
+                    <li><a href="details.html">Details</a><span> | </span></li>
+                    <li><a href="directions.html">Directions</a><span> | </span></li>
+                    <li><a href="nearby.html">Nearby</a><span> | </span></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                </ul>
+            </nav>
+        
+            <!-- Form that will display -->
+            <div id="form" onclick="externalClick()">
+                <div id="formContent">
+                    <div id="close" onclick="closeForm()">&#10006</div>
+                    <form id="bookStay">
+                        <fieldset>
+                            <legend>Book Your Stay</legend>
+                            <div>
+                                <label for="name">Name:</label>
+                                <input id="name" type="text" placeholder="George Clooney" required="required"/>
+                            </div>
+                            <div>
+                                <label for="email">Email:</label>
+                                <input id="email" type="email" placeholder="george@email.com" required="required" />
+                            </div>
+                            <div>
+                                <label for="startDate">Check In:</label>
+                                <input type="date" name="startDate" />
+                            </div>
+                            <div>
+                                <label for="endDate">Check Out:</label>
+                                <input type="date" name="endDate" />
+                            </div>
+                            <textarea id="notes" placeholder="Additional notes..."></textarea>
+                            <!-- Antispam code, doesn't work until connected with Flask
+                            <div>
+                                <label for="antiSpam">Five + Four = </label>
+                                <input id="antiSpam" name="antiSpam" type="text" placeholder="Five + Four = "required="required" />
+                            </div>
+                            -->
+                            <button id="bookButton" type="button" form="bookStay">Book Now</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        
+        </header>
+        
+        <div id="banner">
+            <img src="../images/homepage/banner.jpg" alt="House Overview" />
+        </div>
+        
+        <div id="reviewSection">
+            <div class="wrapper">
+                <h1>"Only the perfect place to spend your holiday, and the rest of your life."</h1>
+                <p>Federica Coda</p>
+            </div>
+        </div>
+        
+        <div id="mainSection">
+            <div class="wrapper">
+                <div class="lColumn">
+                    <p>
+                        Nestled in one of Hawaii’s largest nature preserves and Maui’s premier resort destination 
+                        is this award-winning architecturally designed home available to book during any season for
+                        hosting a fabulous dinner party to having the perfect honeymoon for you and your loved one. 
+                        Overlooking the white sand beach of Oneloa Bay in Maui, the fully furnished luxury #3 Kapalua
+                        Place residence is one of only four exclusive beachfront homes located in a private gated
+                        oceanfront subdivision.
+                    </p>
+                    <p>
+                        Environmental stewardship has and will continue to be a guiding principle of this one-of-a-kind
+                        resort community. Surrounded by the protected West Maui rainforest and two marine sanctuaries.
+                        Kapalua Resort is a special place. As it continues to preserve this naturally beautiful destination,
+                        future plans will offer guests and residents opportunities to enjoy areas of the Kapalua Resort
+                        previously unavailable.
+                    </p>
+                    <p>
+                        Award-winning Hawaiian architect, Jeffery Long of Long and Associates, impeccably designed this
+                        contemporary architectural masterpiece blending the unparalleled natural beauty of the location
+                        with a truly innovative structure creating an imaginative expression of modern luxury with 
+                        breath-taking vision. Take a look at the video below to view just how this little piece of 
+                        heaven was made.
+                    </p>
+                </div>
+                <div class="rColumn">
+                    <img src="../images/homepage/homepage-description.jpg" alt="House Front Door" />
+                </div>
+                <iframe src="https://www.youtube.com/embed/54rFvRE0NZQ" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="wrapper">
+                <section>
+                    <h2>Contact Lisa</h2>
+                    <p>
+                        <a href="mailto:lisatemp@kapalua.com">lisatemp@kapalua.com</a>
+                        <br />
+                        +55 662-65431
+                    </p>
+                    <p>
+                        Helden Residences Kapalua Bay
+                        <br />
+                        Eighteen Bay Drive. Lahaina H1 96754
+                    </p>
+                    <!-- Social Media Icons -->
+                    <a href="https://en-gb.facebook.com/"><img src="../images/social%20media%20icons/facebook.png" alt="Facebook" /></a>
+                    <a href="https://twitter.com/?lang=en"><img src="../images/social%20media%20icons/twitter.png" alt="Twitter" /></a>
+                    <a href="https://www.instagram.com/?hl=en"><img src="../images/social%20media%20icons/instagram.png" alt="Instagram"/></a>
+                </section>
+                
+                <section>
+                    <h2>Links</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="details.html">Details</a></li>
+                        <li><a href="directions.html">Directions</a></li>
+                        <li><a href="nearby.html">Nearby</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h2>Representation</h2>
+                    <p>
+                        Represented by AJarjis Estates,
+                        <br />
+                        in cooperation with Kapula Bay:
+                    </p>
+                    <img src="../images/Kapula%20Bay.png" id="signature" alt="Kapula Bay Signature" />
+                </section>
+                
+                <p id="copyright">&copy; Kapalua Beach House | Website design by Ali Jarjis</p>
+            </div>
+        </footer>
+    </body>
+</html>
